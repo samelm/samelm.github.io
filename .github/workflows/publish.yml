@@ -1,10 +1,12 @@
 name: Publish Website
-
 on:
   push:
     branches: # triggers on any push to master
       - master
-
+defaults:
+  run:
+    shell: bash
+    working-directory: bear
 jobs:
   build-deploy:
     runs-on: ubuntu-latest
@@ -19,11 +21,11 @@ jobs:
           restore-keys: |
             ${{ runner.os }}-npm-
       - name: Install dependencies
-        run: cd ./bear && npm ci
+        run: npm ci
       - name: Build
-        run: cd ./bear && npm run build --if-present
+        run: npm run build --if-present
       - name: Deploy
         uses: peaceiris/actions-gh-pages@v3
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
-          publish_dir: ./bear/dist
+          publish_dir: ./dist
