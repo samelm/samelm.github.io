@@ -1,12 +1,12 @@
-name: Publish Website
+name: Publish Bear
 
 on:
   push:
-    branches: # triggers on any push to master
+    branches:
       - master
 
 jobs:
-  build-deploy:
+  build-deploy-bear:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v1
