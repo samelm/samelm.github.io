@@ -3,17 +3,13 @@ on:
   push:
     branches: # triggers on any push to master
       - master
-defaults:
-  run:
-    shell: bash
-    working-directory: bear
 jobs:
   build-deploy:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v1
       - run: node --version
-      - name: Cache node modules
+        working-directory: ./bear
         uses: actions/cache@v1
         with:
           path: ~/.npm
@@ -21,8 +17,10 @@ jobs:
           restore-keys: |
             ${{ runner.os }}-npm-
       - name: Install dependencies
+        working-directory: ./bear
         run: npm ci
       - name: Build
+        working-directory: ./bear
         run: npm run build --if-present
       - name: Deploy
         uses: peaceiris/actions-gh-pages@v3
