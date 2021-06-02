@@ -1,7 +1,5 @@
 const fileInput = document.querySelector(".file");
 
-alert("test");
-
 const beforeTable = document.createElement("table");
 beforeTable.border = 1;
 beforeTable.cellSpacing = 0;
