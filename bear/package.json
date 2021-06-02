@@ -4,9 +4,7 @@
   "description": "",
   "main": "main.js",
   "scripts": {
-    "dev": "parcel index.html",
-    "build": "parcel build index.html",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "build": "rm -rf dist && parcel build src/main.js"
   },
   "keywords": [],
   "author": "",
