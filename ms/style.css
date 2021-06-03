@@ -20,14 +20,25 @@ html {
 .container {
   max-width: 1240px;
   width: 100%;
+  margin: 0 auto;
+  height: 100%;
+}
+
+.topbar {
+  display: none;
 }
 
 .header {
   height: 81px;
+
+  padding: 0 16px;
+}
+
+.header__inner {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 0 16px;
+  height: 100%;
 }
 
 .header__controls {
@@ -95,13 +106,45 @@ html {
 }
 
 @media (min-width: 1240px) {
+  .topbar {
+    height: 50px;
+    display: block;
+  }
+
+  .topbar__inner {
+    display: flex;
+    height: 100%;
+    align-items: center;
+  }
+
+  .topbar__menu {
+    display: flex;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    margin-left: auto;
+    align-items: center;
+  }
+
+  .topbar__menu__item {
+    margin-left: 18px;
+  }
+
+  .header__btn-menu {
+    display: none;
+  }
+
+  .logo img {
+    width: 231px;
+    height: 44px;
+  }
+
   .btn-menu-close {
     display: none;
   }
 
   .menu-wrapper {
     border: 1px solid #f4f8ff;
-    background: linear-gradient(to top, #f4f8ff, #fff 50%);
     height: 100px;
   }
 

@@ -8,21 +8,43 @@
     <link rel="stylesheet" href="./style.css" />
   </head>
   <body>
-    <header class="header">
-      <button
-        class="header__btn header__btn-icon header__btn-menu"
-        id="menu-btn"
-      ></button>
-      <a href="/" class="logo">
-        <img src="./assets/logo.png" width="149" height="30" alt="" />
-      </a>
-      <div class="header__controls">
-        <div class="phones">
-          <button
-            class="header__btn header__btn-icon header__btn-phone"
-          ></button>
+    <div class="topbar">
+      <div class="container">
+        <div class="topbar__inner">
+          <div class="topbar__location">Санкт-Петербург</div>
+          <ul class="topbar__menu">
+            <li class="topbar__menu__item">Доставка и оплата</li>
+            <li class="topbar__menu__item">Гарантия</li>
+            <li class="topbar__menu__item">Обмен и возврат</li>
+            <li class="topbar__menu__item">Компенсация инвалидам</li>
+            <li class="topbar__menu__item">Отзывы</li>
+            <li class="topbar__menu__item">О компании</li>
+            <li class="topbar__menu__item">Контакты</li>
+          </ul>
         </div>
-        <button class="header__btn header__btn-icon header__btn-cart"></button>
+      </div>
+    </div>
+    <header class="header">
+      <div class="container">
+        <div class="header__inner">
+          <button
+            class="header__btn header__btn-icon header__btn-menu"
+            id="menu-btn"
+          ></button>
+          <a href="/" class="logo">
+            <img src="./assets/logo.png" width="149" height="30" alt="" />
+          </a>
+          <div class="header__controls">
+            <div class="phones">
+              <button
+                class="header__btn header__btn-icon header__btn-phone"
+              ></button>
+            </div>
+            <button
+              class="header__btn header__btn-icon header__btn-cart"
+            ></button>
+          </div>
+        </div>
       </div>
     </header>
     <div class="menu-wrapper">
