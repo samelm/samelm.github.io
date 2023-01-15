@@ -1,0 +1,88 @@
+html {
+  box-sizing: border-box;
+  height: 100vh;
+}
+
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+}
+
+body {
+  margin: 0;
+  height: 100%;
+  display: grid;
+  place-items: center;
+  background-color: #f1f1f1;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif,
+    "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+  color: #333333;
+}
+
+.form-wrapper {
+  position: relative;
+  background-color: #ffffff;
+  max-width: 450px;
+  width: 100%;
+  box-shadow: 0 1px 1px hsl(0deg 0% 0% / 0.075), 0 2px 2px hsl(0deg 0% 0% / 0.075),
+    0 4px 4px hsl(0deg 0% 0% / 0.075), 0 8px 8px hsl(0deg 0% 0% / 0.075),
+    0 16px 16px hsl(0deg 0% 0% / 0.075);
+  border-radius: 8px;
+}
+
+.form {
+  height: 100%;
+  padding: 24px;
+}
+
+.form-field {
+  margin-bottom: 24px;
+}
+
+.form-field-label-wrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 8px;
+}
+
+.input-text {
+  width: 100%;
+  padding: 8px;
+  border-radius: 4px;
+  background: none;
+  border: 1px solid #ccc;
+}
+
+.button {
+  background: none;
+  width: 100%;
+  cursor: pointer;
+  font-size: 16px;
+  padding: 12px 18px;
+  border: 0;
+  background-color: #faecd6;
+  border-radius: 8px;
+  transition: background-color 0.2s ease-in;
+  color: #4e6c50;
+  font-weight: 500;
+}
+
+.button:hover {
+  background-color: #dbc8a6;
+}
+
+.homeland-illustration {
+  width: 300px;
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: -1;
+  transition: transform 0.3s ease-in-out;
+}
+
+.homeland-illustration--visible {
+  transform: translateY(-158px) translateX(-50%);
+}
